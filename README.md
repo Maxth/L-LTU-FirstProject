@@ -21,3 +21,5 @@ Uppgift 3
 Skriv programmet
 
 Svar: Se Program.cs. Jag tolkade uppgiften som att programmet ska kunna skriva ut personalregistret på kommando via inmatning i konsolen. Koden är nog lite svårläst, vilket beror på att jag endast har lite erfarenhet av att jobba med in- och utmatning i konsolen.
+
+FOTNOT: Jag är osäker på vad man normalt laddar upp på Git i ett sånt här projekt. Noterade att det tillkom en del filer efter att jag kört programmet, vilka kanske inte borde varit med. Detta är gjort på Mac i VS Code.
