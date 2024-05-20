@@ -1,0 +1,15 @@
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/bin/Debug/net8.0/FirstProject
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/bin/Debug/net8.0/FirstProject.deps.json
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/bin/Debug/net8.0/FirstProject.runtimeconfig.json
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/bin/Debug/net8.0/FirstProject.dll
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/bin/Debug/net8.0/FirstProject.pdb
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/FirstProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/FirstProject.AssemblyInfoInputs.cache
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/FirstProject.AssemblyInfo.cs
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/FirstProject.csproj.CoreCompileInputs.cache
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/FirstProject.sourcelink.json
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/FirstProject.dll
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/refint/FirstProject.dll
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/FirstProject.pdb
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/FirstProject.genruntimeconfig.cache
+/Users/maxth/lexicon_ltu/FirstProject/FirstProject/obj/Debug/net8.0/ref/FirstProject.dll
