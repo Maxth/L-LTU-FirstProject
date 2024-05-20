@@ -3,14 +3,13 @@
 List<Employee> employeeLedger = [];
 string[] validActions = ["1", "2", "3"];
 
-string? action;
 while (true)
 {
     Console.WriteLine("What do you want to do?");
     Console.WriteLine(
         "Press 1 to add an employee to the ledger. Press 2 to print out the ledger. Press 3 to exit."
     );
-    action = Console.ReadLine();
+    string? action = Console.ReadLine();
     if (validActions.Contains(action))
     {
         switch (action)
