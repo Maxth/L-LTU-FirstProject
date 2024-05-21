@@ -1,7 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-List<Employee> employeeLedger = [];
-string[] validActions = ["1", "2", "3"];
+
+EmployeeRegistry employeeRegistry = new EmployeeRegistry();
+SeedData();
 
 while (true)
 {
@@ -10,75 +11,73 @@ while (true)
         "Press 1 to add an employee to the ledger. Press 2 to print out the ledger. Press 3 to exit."
     );
     string? action = Console.ReadLine();
-    if (validActions.Contains(action))
+
+    if (action == "3")
     {
-        switch (action)
+        break;
+    }
+
+    switch (action)
+    {
+        case "1":
+            string name = ReceiveEmployeeName();
+            int wage = ReceiveEmployeeWage();
+            employeeRegistry.AddEmployee(name, wage);
+            Console.WriteLine($"Employee {name} succesfully added to registry!\n");
+            break;
+        case "2":
+            employeeRegistry.PrintRegistry();
+            break;
+        default:
+            GiveFeedbackForInvalidInput();
+            break;
+    }
+}
+
+int ReceiveEmployeeWage()
+{
+    while (true)
+    {
+        Console.WriteLine("Enter the new employee's wage:");
+        string? wage = Console.ReadLine();
+        //Validate the wage is an int
+        if (int.TryParse(wage, out int intWage))
         {
-            case "1":
-                while (true)
-                {
-                    Console.WriteLine("Enter employee name");
-                    string? n = Console.ReadLine();
-                    if (n != null && n.Length > 0)
-                    {
-                        while (true)
-                        {
-                            Console.WriteLine("Enter employee wage");
-                            string? w = Console.ReadLine();
-
-                            try
-                            {
-                                employeeLedger.Add(new Employee(n, int.Parse(w)));
-                                Console.WriteLine("Employee " + n + " added!\n");
-
-                                //Detta var jag tvungen att googla, vanare vid Java där man kan namnge loopar
-                                goto caseEnd;
-                            }
-                            catch
-                            {
-                                invalidInput();
-                            }
-                        }
-                    }
-                    else
-                    {
-                        invalidInput();
-                    }
-                }
-                caseEnd:
-                {
-                    break;
-                }
-            case "2":
-                Console.WriteLine("Here comes the ledger:");
-                foreach (Employee employee in employeeLedger)
-                {
-                    Console.WriteLine("\n");
-                    Console.WriteLine("Name: " + employee.Name + "  Wage: " + employee.Wage);
-                    Console.WriteLine("\n");
-                }
-                break;
-            case "3":
-                goto endProgram;
-            default:
-                break;
+            return intWage;
+        }
+        else
+        {
+            GiveFeedbackForInvalidInput();
         }
     }
-    else
+}
+
+string ReceiveEmployeeName()
+{
+    while (true)
     {
-        invalidInput();
+        Console.WriteLine("Enter the new employee's name:");
+        string? name = Console.ReadLine();
+        //Validate the name is not null and consists of only letters
+        if (name != null && name.All(Char.IsLetter))
+        {
+            return name;
+        }
+        else
+        {
+            GiveFeedbackForInvalidInput();
+        }
     }
 }
 
-endProgram: { }
-
-static void invalidInput()
+void SeedData()
 {
-    Console.WriteLine("Invalid input, please try again.\n");
+    employeeRegistry.AddEmployee("Kalle", 40000);
+    employeeRegistry.AddEmployee("Stina", 40000);
+    employeeRegistry.AddEmployee("Nisse", 60000);
 }
 
-class Employee(string name, int wage)
+static void GiveFeedbackForInvalidInput()
 {
-    public string Name { get; set; } = name;
-    public int Wage { get; set; } = wage;
+    Console.WriteLine("Invalid input, please try again.\n");
 }

@@ -10,16 +10,18 @@ personalregister. De har endast två krav:
 Uppgift 1
 Vilka klasser bör ingå i programmet?
 
-Svar: Jag tror endast en klass (Employee) behövs. Vi är inte ombedda att särskilja mellan olika typer av anställda så jag tror det räcker med den klassen.
+Svar: Vi behöver klasserna Employee och EmployeeRegistry.
 
 Uppgift 2
 Vilka attribut och metoder bör ingå i dessa klasser?
 
-Svar: Jag tror det räcker om klassen Employee har attributen "name" och "wage" med tillhörande get & set metoder.
+Svar: Employee-klassen har attributen Name och Wage med tillhörande med endast tillhörande set-metoder. Vi override:ar toString-metoden i Employee-klassen så att den output:ar en kort mening med den anställdes namn och lön.
+
+EmployeeRegistry-klassen har en List av Employee utan set- eller getmetoder. Den har en metod AddEmployee(string name, int wage) för att lägga till anställda och och en metod PrintRegistry som anropar toString() på samtliga Employee i List av Employee.
 
 Uppgift 3
 Skriv programmet
 
-Svar: Se Program.cs. Jag tolkade uppgiften som att programmet ska kunna skriva ut personalregistret på kommando via inmatning i konsolen. Koden är nog lite svårläst, vilket beror på att jag endast har lite erfarenhet av att jobba med in- och utmatning i konsolen.
+Svar: Se Program.cs. Jag tolkade uppgiften som att programmet ska kunna skriva ut personalregistret på kommando via inmatning i konsolen.
 
-FOTNOT: Jag är osäker på vad man normalt laddar upp på Git i ett sånt här projekt. Noterade att det tillkom en del filer efter att jag kört programmet, vilka kanske inte borde varit med. Detta är gjort på Mac i VS Code.
+FOTNOT: Jag är osäker på vad man normalt laddar upp på Git i ett .Net-projekt. Hade varit fint om den autogenererade en gitignore... Noterade att det tillkom en del filer efter att jag kört programmet, vilka kanske inte borde varit med.
