@@ -22,6 +22,6 @@ EmployeeRegistry-klassen har en List av Employee utan set- eller getmetoder. Den
 Uppgift 3
 Skriv programmet
 
-Svar: Se Program.cs. Jag tolkade uppgiften som att programmet ska kunna skriva ut personalregistret på kommando via inmatning i konsolen.
+Svar: Se Program.cs, Employee.cs samt EmployeeRegistry.cs. Jag tolkade uppgiften som att programmet ska kunna skriva ut personalregistret på kommando via inmatning i konsolen.
 
 FOTNOT: Jag är osäker på vad man normalt laddar upp på Git i ett .Net-projekt. Hade varit fint om den autogenererade en gitignore... Noterade att det tillkom en del filer efter att jag kört programmet, vilka kanske inte borde varit med.
