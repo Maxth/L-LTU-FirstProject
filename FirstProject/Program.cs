@@ -41,7 +41,7 @@ int ReceiveEmployeeWage()
         Console.WriteLine("Enter the new employee's wage:");
         string? wage = Console.ReadLine();
         //Validate the wage is an int
-        if (int.TryParse(wage, out int intWage))
+        if (int.TryParse(wage, out int intWage) && intWage > 0)
         {
             return intWage;
         }
@@ -58,8 +58,12 @@ string ReceiveEmployeeName()
     {
         Console.WriteLine("Enter the new employee's name:");
         string? name = Console.ReadLine();
-        //Validate the name is not null and consists of only letters
-        if (name != null && name.All(Char.IsLetter))
+        //Validate the name is not null, not a blank string, and that it contains only letters or whitespace.
+        if (
+            name != null
+            && name.Length > 0
+            && name.Split(" ").All(subString => subString.All(Char.IsLetter))
+        )
         {
             return name;
         }
