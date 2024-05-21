@@ -8,7 +8,7 @@ while (true)
 {
     Console.WriteLine("What do you want to do?");
     Console.WriteLine(
-        "Press 1 to add an employee to the ledger. Press 2 to print out the ledger. Press 3 to exit."
+        "Press 1 to add an employee to the registry. Press 2 to print out the registry. Press 3 to exit."
     );
     string? action = Console.ReadLine();
 
