@@ -15,7 +15,7 @@ Svar: Vi behöver klasserna Employee och EmployeeRegistry.
 Uppgift 2
 Vilka attribut och metoder bör ingå i dessa klasser?
 
-Svar: Employee-klassen har attributen Name och Wage med tillhörande med endast tillhörande set-metoder. Vi override:ar toString-metoden i Employee-klassen så att den output:ar en kort mening med den anställdes namn och lön.
+Svar: Employee-klassen har attributen Name och Wage med tillhörande get & set-metoder. Vi override:ar toString-metoden i Employee-klassen så att den output:ar en kort mening med den anställdes namn och lön.
 
 EmployeeRegistry-klassen har en List av Employee utan set- eller getmetoder. Den har en metod AddEmployee(string name, int wage) för att lägga till anställda och och en metod PrintRegistry som anropar toString() på samtliga Employee i List av Employee.
 
