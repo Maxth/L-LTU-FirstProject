@@ -1,21 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
-
+IConsoleUI CUI = new ConsoleUI();
 EmployeeRegistry employeeRegistry = new EmployeeRegistry();
 SeedData();
 
 while (true)
 {
-    Console.WriteLine("What do you want to do?");
-    Console.WriteLine(
+    CUI.Write("What do you want to do?");
+    CUI.Write(
         "Press 1 to add an employee to the registry. Press 2 to print out the registry. Press 3 to exit."
     );
-    string? action = Console.ReadLine();
-
-    if (action == "3")
-    {
-        break;
-    }
+    string action = CUI.Read();
 
     switch (action)
     {
@@ -23,10 +17,13 @@ while (true)
             string name = ReceiveEmployeeName();
             int wage = ReceiveEmployeeWage();
             employeeRegistry.AddEmployee(name, wage);
-            Console.WriteLine($"Employee {name} succesfully added to registry!\n");
+            CUI.Write($"Employee {name} successfully added to registry!\n");
             break;
         case "2":
             employeeRegistry.PrintRegistry();
+            break;
+        case "3":
+            Environment.Exit(0);
             break;
         default:
             GiveFeedbackForInvalidInput();
@@ -38,8 +35,8 @@ int ReceiveEmployeeWage()
 {
     while (true)
     {
-        Console.WriteLine("Enter the new employee's wage:");
-        string? wage = Console.ReadLine();
+        CUI.Write("Enter the new employee's wage:");
+        string wage = CUI.Read();
         //Validate the wage is an int
         if (int.TryParse(wage, out int intWage) && intWage > 0)
         {
@@ -56,14 +53,10 @@ string ReceiveEmployeeName()
 {
     while (true)
     {
-        Console.WriteLine("Enter the new employee's name:");
-        string? name = Console.ReadLine();
-        //Validate the name is not null, not a blank string, and that it contains only letters or whitespace.
-        if (
-            name != null
-            && name.Length > 0
-            && name.Split(" ").All(subString => subString.All(Char.IsLetter))
-        )
+        CUI.Write("Enter the new employee's name:");
+        string name = CUI.Read();
+        //Validate the name contains letters and possibly whitespace.
+        if (name.Split(" ").All(subString => subString.All(Char.IsLetter)))
         {
             return name;
         }
@@ -81,7 +74,7 @@ void SeedData()
     employeeRegistry.AddEmployee("Nisse", 60000);
 }
 
-static void GiveFeedbackForInvalidInput()
+void GiveFeedbackForInvalidInput()
 {
-    Console.WriteLine("Invalid input, please try again.\n");
+    CUI.Write("Invalid input, please try again.\n");
 }
