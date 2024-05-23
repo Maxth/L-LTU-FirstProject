@@ -1,7 +1,7 @@
 public class Main
 {
     private IConsoleUI _cUI;
-    private IEmployeeRegistry _employeeRegistry;
+    private EmployeeRegistry _employeeRegistry;
 
     public Main(IConsoleUI CUI)
     {

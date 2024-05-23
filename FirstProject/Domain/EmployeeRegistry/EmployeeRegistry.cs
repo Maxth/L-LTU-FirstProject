@@ -1,4 +1,4 @@
-public class EmployeeRegistry : IEmployeeRegistry
+public class EmployeeRegistry
 {
     private List<Employee> _registry;
     private IConsoleUI _cUI;
