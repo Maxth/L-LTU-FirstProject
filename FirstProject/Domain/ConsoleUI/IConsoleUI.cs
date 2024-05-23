@@ -4,3 +4,8 @@ public interface IConsoleUI
 
     string Read();
 }
+
+public interface IMockConsoleUI : IConsoleUI
+{
+    public string SetInput { get; set; }
+}

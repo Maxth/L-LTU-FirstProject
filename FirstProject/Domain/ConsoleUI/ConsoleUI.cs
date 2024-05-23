@@ -11,13 +11,13 @@ class ConsoleUI : IConsoleUI
     }
 }
 
-class MockConsoleUI : IConsoleUI
+public class MockConsoleUI : IMockConsoleUI
 {
-    public string SetReadInput { get; set; } = "3";
+    public string SetInput { get; set; } = "3";
 
     public string Read()
     {
-        return SetReadInput;
+        return SetInput;
     }
 
     public void Write(string msg)
