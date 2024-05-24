@@ -8,7 +8,7 @@ public class EmployeeRegistryTests
     public void Adding_Employee_Updates_EmployeeRegistry()
     {
         //Arrange
-        IEmployeeRegistry employeeRegistry = new EmployeeRegistry(_cui);
+        EmployeeRegistry employeeRegistry = new EmployeeRegistry(_cui);
 
         //Act
         employeeRegistry.AddEmployee("Test", 20000);
